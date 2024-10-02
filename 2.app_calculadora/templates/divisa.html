@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<center>
+<h1 class="py-3">Calculadora de Divisas <img src="static/img/divisa.png" alt="" width="55px"></h1>
+<h6>Ingresar en monto de dolares</h6>
+
+<form action="/divisa" method="POST">
+
+<div class="row justify-content-center">
+    <div class=" py-5 col-4 justify-content-center">
+        <input type="number" class="form-control" name="d1" placeholder="Ingrese el numero de dolares" aria-label="Ingrese el numero de dolares">
+    </div>
+</div>
+<div class="row py-">
+</div>
+
+    <div class="col-md-12">
+    <button type="submit" class="btn btn-outline-primary">Calcular</button>
+</div>
+
+</form>
+</center>
+<div class="row py-2 ">
+    <div class="col">
+        <h3>La cantidad en pesos colombianos es: {{total_divisa}}</h3>
+    </div>
+</div>
+
+{% endblock%}
+
